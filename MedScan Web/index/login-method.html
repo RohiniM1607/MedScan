@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScan</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <img src="MedScan.png" alt="Logo" class="logo">
+      <h2>Login - Method</h2>
+
+      <p id="instruction-text">Enter User ID:</p> <!-- Placeholder text -->
+
+      <form action="choose-role.html" method="get">
+        <div id="login-method">
+          <label id="method-label"></label>
+          <input type="text" id="method-input" name="method-input" placeholder="Enter Your User Id" required>
+        </div>
+        <button type="submit">Next</button>
+      </form>
+
+      <!-- Back Symbol and Text at the bottom -->
+      <div class="back-symbol">
+        <a href="login-via.html">&#8592; Back</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script to dynamically update the instruction text based on choice -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-size: 20px; /* Common text size */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+/* Form Container Styles */
+.form-container,
+.login-container,
+.signup-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 400px; /* Set a fixed width for all containers */
+}
+
+/* Logo Styles */
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 150px;
+}
+
+/* Text and Form Styles */
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    padding: 10px; /* Reduced padding for smaller height */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem; /* Adaptive text size */
+    height: 40px; /* Reduced height for input boxes */
+}
+
+/* Adjust space for dropdown arrow */
+select {
+    padding-right: 30px; /* Added space for dropdown arrow */
+}
+
+/* Reduce the height of select element */
+select {
+    height: 40px; /* Reduced height */
+}
+
+/* Dropdown arrow position adjustment */
+select::-ms-expand {
+    display: none; /* Hide default dropdown arrow in IE */
+}
+
+button {
+    padding: 10px;
+    background-color: #e74c3c;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-text a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Login Page Specific Styles */
+.login-container {
+    width: 400px; /* Original size for login */
+}
+
+/* Signup Page Specific Styles */
+.signup-container {
+    width: 500px; /* Original size for signup */
+}
+
+/* Dashboard Styles */
+.dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Match container size */
+    box-sizing: border-box;
+}
+
+.dashboard ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard li {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Back Symbol */
+.back-symbol {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-symbol a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.back-symbol a:hover {
+    text-decoration: underline;
+}
+
+/* Role Fields Styles */
+.role-fields {
+    display: none;
+    margin-bottom: 20px 0;
+}
+
+.role-fields label {
+    margin-bottom: 8px;
+}
+
+.role-fields input[type="text"],
+.role-fields input[type="email"],
+.role-fields input[type="tel"],
+.role-fields input[type="date"],
+.role-fields select {
+    padding: 10px; /* Reduced padding for smaller height */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem; /* Adaptive text size */
+    height: 40px; /* Reduced height for input boxes */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard ul li {
+        padding: 12px;
+        font-size: 16px;
+    }
+    .dashboard h2 {
+        font-size: 22px;
+    }
+
+    .form-container,
+    .login-container,
+    .signup-container {
+        width: 90%; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard ul li {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .dashboard h2 {
+        font-size: 18px;
+    }
+
+    .form-container,
+    .login-container,
+    .signup-container {
+        width: 90%; /* Adjusted for smaller screens */
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .navigation {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+
+        .navigation a:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .patient-details {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        #patient-info {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Details</h1>
+
+        <div class="navigation">
+            <a href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+        <div class="patient-details">
+            <h2>Patient Information</h2>
+            <div id="patient-info">
+                <!-- Patient details will be loaded here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulated patient data
+        const patient = {
+            id: "P12345",
+            name: "John Doe",
+            dob: "1994-05-23",
+            gender: "Male",
+            bloodType: "O+",
+            allergies: "Penicillin",
+            chronicConditions: "Hypertension",
+            medications: "Lisinopril 10mg",
+            primaryDoctor: "Dr. Emily Clark",
+            lastVisit: "2024-09-15",
+            diagnosis: "Hypertension",
+            nextAppointment: "2024-10-10",
+            emergencyContact: {
+                name: "Jane Doe",
+                phone: "555-1234"
+            }
+        };
+
+        // Function to display patient details
+        function loadPatientDetails() {
+            const patientInfo = document.getElementById('patient-info');
+
+            patientInfo.innerHTML = `
+                <p><strong>Patient ID:</strong> ${patient.id}</p>
+                <p><strong>Name:</strong> ${patient.name}</p>
+                <p><strong>Date of Birth:</strong> ${patient.dob}</p>
+                <p><strong>Gender:</strong> ${patient.gender}</p>
+                <p><strong>Blood Type:</strong> ${patient.bloodType}</p>
+                <p><strong>Allergies:</strong> ${patient.allergies}</p>
+                <p><strong>Chronic Conditions:</strong> ${patient.chronicConditions}</p>
+                <p><strong>Medications:</strong> ${patient.medications}</p>
+                <p><strong>Primary Doctor:</strong> ${patient.primaryDoctor}</p>
+                <p><strong>Last Visit:</strong> ${patient.lastVisit}</p>
+                <p><strong>Diagnosis:</strong> ${patient.diagnosis}</p>
+                <p><strong>Next Appointment:</strong> ${patient.nextAppointment}</p>
+                <p><strong>Emergency Contact:</strong> ${patient.emergencyContact.name} (${patient.emergencyContact.phone})</p>
+            `;
+        }
+
+        // Call function to load patient details when the page is ready
+        window.onload = loadPatientDetails;
+    </script>
+</body>
+</html>

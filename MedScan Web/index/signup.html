@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <img src="MedScan.png" alt="Logo" class="logo">
+      <h2>Sign Up</h2>
+      <form action="signup-process.html" method="post">
+        <label for="role">Select Role:</label>
+        <select id="role" name="role" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="patient">Patient</option>
+          <option value="insurance">Insurance Agency</option>
+          <option value="doctor">Doctor</option>
+        </select>
+
+        <!-- Patient Signup Fields -->
+        <div id="patient-fields" class="role-fields" style="display: none;">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Enter Your Full Name" required>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob"  required>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" name="contact" placeholder="Enter contact Number" required>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Your E-mail Id" required>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" placeholder="Enter Your Address" required>
+        </div>
+
+        <!-- Insurance Agency Signup Fields -->
+        <div id="insurance-fields" class="role-fields" style="display: none;">
+          <label for="full-name-insurance">Agency Name:</label>
+          <input type="text" id="full-name-insurance" name="full-name-insurance" placeholder="Enter Agency Name" required>
+
+          <label for="rep-name">Representative Name:</label>
+          <input type="text" id="rep-name" name="rep-name" placeholder="Enter Representative Name" required>
+
+          <label for="license-number">Medical License Number:</label>
+          <input type="text" id="license-number" name="license-number" placeholder="Enter license-number" required>
+
+          <label for="specialization">Specialization:</label>
+          <input type="text" id="specialization" name="specialization" placeholder="Enter Specification" required>
+
+          <label for="agency-contact">Contact Number</label>
+          <input type="tel" id="agency-contact"  name="agency-contact" placeholder="Enter your contact number" required>
+
+          <label for="agency-email">Email Address</label>
+          <input type="email" id="agency-email"  name="agency-email" placeholder="Enter your email address" required>
+
+          <label for="agency-address">Office Address</label>
+          <input type="text" id="agency-address"  name="agency-address" placeholder="Enter your office address" required>
+        </div>
+
+        <!-- Doctor Signup Fields -->
+        <div id="doctor-fields" class="role-fields" style="display: none;">
+          <label for="doctor-full-name">Full Name</label>
+          <input type="text" id="doctor-full-name" placeholder="Enter your full name" required>
+
+          <label for="doctor-license">Medical License Number</label>
+          <input type="text" id="doctor-license" placeholder="Enter your license number" required>
+
+          <label for="doctor-specialization">Specialization</label>
+          <input type="text" id="doctor-specialization" placeholder="Enter your specialization" required>
+
+          <label for="doctor-contact">Contact Number</label>
+          <input type="tel" id="doctor-contact" placeholder="Enter your contact number" required>
+
+          <label for="doctor-email">Email Address</label>
+          <input type="email" id="doctor-email" placeholder="Enter your email address" required>
+
+          <label for="doctor-address">Clinic/Hospital Name</label>
+          <input type="text" id="doctor-address" placeholder="Enter your clinic/hospital name" required>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      
+      <!-- Back Symbol and Text at the bottom -->
+      <div class="back-symbol">
+        <a href="login-via.html">&#8592; Back</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script to handle dynamic display of signup fields -->
+  <script src="js/signup-script.js"></script>
+</body>
+</html>
+

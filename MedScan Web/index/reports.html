@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Report</h1>
+
+        <div class="navigation">
+            <a href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+        <div class="report-details">
+            <h2>Report Information</h2>
+            <div id="report-info">
+                <!-- Medical report details will be loaded here via JS -->
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Full Medical Report</h2>
+            <p>You can view your detailed medical report by clicking the link below:</p>
+            <a href="Sample.report.pdf" target="_blank" class="pdf-link">View Full Medical Report (PDF)</a>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .navigation {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+
+        .navigation a:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        #report-info {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .pdf-link:hover {
+            background-color: #e74c3c;
+        }
+
+    </style>
+
+    <script>
+        // Simulated medical report data
+        const report = {
+            reportId: "R56789",
+            dateIssued: "2024-09-15",
+            testType: "Blood Test",
+            diagnosis: "Hypertension",
+            recommendations: "Regular medication, diet control, and follow-up in 3 months.",
+            doctor: "Dr. Emily Clark"
+        };
+
+        // Function to display report details
+        function loadReportDetails() {
+            const reportInfo = document.getElementById('report-info');
+
+            reportInfo.innerHTML = `
+                <p><strong>Report ID:</strong> ${report.reportId}</p>
+                <p><strong>Date Issued:</strong> ${report.dateIssued}</p>
+                <p><strong>Test Type:</strong> ${report.testType}</p>
+                <p><strong>Diagnosis:</strong> ${report.diagnosis}</p>
+                <p><strong>Recommendations:</strong> ${report.recommendations}</p>
+                <p><strong>Attending Doctor:</strong> ${report.doctor}</p>
+            `;
+        }
+
+        // Call function to load report details when the page is ready
+        window.onload = loadReportDetails;
+    </script>
+</body>
+</html>

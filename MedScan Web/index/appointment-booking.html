@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .navigation {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+
+        .navigation a:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+
+        <div class="navigation">
+            <a href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+        <form id="appointment-form">
+            <label for="patient-name">Full Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="dr-emily-clark">Dr. Emily Clark</option>
+                <option value="dr-john-smith">Dr. John Smith</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form data
+            const patientName = document.getElementById('patient-name').value;
+            const appointmentDate = document.getElementById('appointment-date').value;
+            const appointmentTime = document.getElementById('appointment-time').value;
+            const doctor = document.getElementById('doctor').value;
+            const reason = document.getElementById('reason').value;
+
+            // Simulate form submission
+            alert(`Appointment booked successfully!\n\nPatient Name: ${patientName}\nDate: ${appointmentDate}\nTime: ${appointmentTime}\nDoctor: ${doctor}\nReason: ${reason}`);
+
+            // Optionally redirect or reset form
+            // window.location.href = 'confirmation.html'; // Redirect to a confirmation page
+            // this.reset(); // Reset the form fields
+        });
+    </script>
+</body>
+</html>

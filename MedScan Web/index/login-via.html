@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - via</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <img src="MedScan.png" alt="Logo" class="logo">
+      <h2>Login</h2>
+      <form action="login-method.html" method="get">
+        <label for="login-option">Login Via:</label>
+        <select name="login-option" id="login-option" required>
+          <option value="" disabled selected>Select Login Method</option>
+          <option value="qr">QR Code</option>
+          <option value="userid">User ID</option>
+        </select>
+        <button type="submit">Next</button>
+      </form>
+      <p class="signup-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <img src="MedScan.png" alt="Logo" class="logo">
+      <h2>Choose your Role</h2>
+
+      <form action="password-verification.html" method="get">
+        <label for="role">Select Role:</label>
+        <select id="role" name="role" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="patient">Patient</option>
+          <option value="insurance">Insurance Agency</option>
+          <option value="doctor">Doctor</option>
+        </select>
+        <button type="submit">Next</button>
+      </form>
+
+      <!-- Back Symbol and Text at the bottom -->
+      <div class="back-symbol">
+        <a href="login-method.html">&#8592; Back</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
